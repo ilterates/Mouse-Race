@@ -27,12 +27,15 @@ function update(){
     player2time = formattedTime;
   }
 }
+
+// takes start time - time now = time passed
 function delta(){
   var now = Date.now();
   var timePassed = now - offset;
   offset = now;
   return timePassed;
 }
+// this function changes time from just milliseconds to minutes:seconds.milliseconds
 function timeFormatter(timeInMilliseconds){
   var time = new Date(timeInMilliseconds);
   var minutes = time.getMinutes();
@@ -46,7 +49,6 @@ this.isOn = false;
 
 
 this.start = function() {
-// aka if (this.isOn === false)
   if (!this.isOn) {
     interval = setInterval(update, 10);
     offset = Date.now();
@@ -85,6 +87,10 @@ this.start = function() {
   });
 
   $("#start").mouseover(function(){
+    if ( player === 1 ) {
+      $("#player1").text("Player One: 0:0.000");
+      $("#player2").text("Player Two: 0:0.000");
+    }
     gameOn = true;
     $(".container").fadeTo( "fast" , 1, function() {
     $("#player1").val(timer.formattedTime);
@@ -124,4 +130,15 @@ this.start = function() {
       $("#player2").text("Player Two: " + player2time + "  Winner!");
     }
   }
+  $(document).keydown(function (event){
+    if(event.ctrlKey && event.which == 32){
+      $("#player1").text("Player One: 0:0.000");
+      $("#player2").text("Player Two: 0:0.000");
+      player = 1;
+      timer.stop();
+      timer.reset();
+      console.log("restarted");
+
+    }
+  });
 }
