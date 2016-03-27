@@ -1,1 +1,277 @@
-hello
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- css connector -->
+      <link rel="stylesheet" type="text/css" href="style/style.css">
+      <!-- font -->
+      <link href='https://fonts.googleapis.com/css?family=Peddana' rel='stylesheet' type='text/css'>
+
+      <!--jQuery-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script type = "text/javascript"
+        src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+      <!--Bootstrap?-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <!-- Font -->
+      <link href='https://fonts.googleapis.com/css?family=Peddana' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <title>Mouse game?</title>
+  </head>
+  <body>
+    <div class="player col-md-6" id="player1">
+      <p>Player One: 0:0.000</p>
+    </div>
+    <div class="player col-md-6" id="player2">
+      <p>Player Two: 0:0.000</p>
+    </div>
+    <div class="container"> <br><br><br><br><br><br>
+
+      <div class="row">
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1" id="finish">
+        </div>
+      </div>
+      <div class="row">
+        <div class="on col-md-1" id="start">
+        </div>
+        <div class="on on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="on col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+        <div class="off col-md-1">
+        </div>
+      </div>
+    </div>
+   <div class="trap">
+     <div class="trap">
+       <div class="trap">
+
+       </div>
+       <div class="trap">
+
+       </div>
+
+     </div>
+   </div>
+   <div class="trap">
+     <div class="trap">
+       <div class="trap">
+
+       </div>
+       <div class="trap">
+
+       </div>
+
+     </div>
+   </div>
+   <div class="trap">
+     <div class="trap">
+       <div class="trap">
+
+       </div>
+       <div class="trap">
+
+       </div>
+
+     </div>
+   </div>
+   <!-- javascript -->
+   <script type="text/javascript" src="js/js.js"></script>
+
+  </body>
+</html>
